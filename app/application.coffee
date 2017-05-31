@@ -26,6 +26,15 @@ module.exports = ->
 		catch error
 			log.error error
 			@status = 503
+			
+	router.get '/v1/online', ->
+		try
+			response = yield request
+				url: config.shacklesUrl
+			@body = JSON.parse(response.body)
+		catch error
+			log.error error
+			@status = 503
 
 	app.use(router.routes()).use(router.allowedMethods())
 
