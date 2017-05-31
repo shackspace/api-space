@@ -1,0 +1,41 @@
+{
+  "name": "shackspace-api-space",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bin/server.js",
+  "scripts": {
+    "start": "nodemon --watch app --ext \"js,coffee\" bin/server.js",
+    "start:production": "node bin/server.js",
+    "test": "mocha --compilers coffee:coffee-script/register test/*.test.coffee",
+    "docs:install": "cd docs && npm install",
+    "docs:start": "cd docs && roots watch",
+    "docs:build": "cd docs && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shackspace/api-space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shackspace/api-space/issues"
+  },
+  "homepage": "https://github.com/shackspace/ap-spacei#readme",
+  "dependencies": {
+    "co-request": "^1.0.0",
+    "coffee-script": "^1.12.4",
+    "koa": "^1.2.5",
+    "koa-body": "^1.6.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^5.4.0",
+    "koa-send": "^3.3.0",
+    "koa-static": "^2.1.0",
+    "log4js": "^1.1.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
