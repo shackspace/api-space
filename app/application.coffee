@@ -22,7 +22,7 @@ module.exports = ->
 		try
 			portalState = yield request
 				url: config.portalUrl
-			@body = portalState
+			@body = JSON.parse(portalState.body)
 		catch error
 			log.error error
 			@status = 503
