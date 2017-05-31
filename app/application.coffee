@@ -1,7 +1,6 @@
 config = require '../config'
 send = require 'koa-send'
 request = require 'co-request'
-cheerio = require 'cheerio'
 log4js = require 'log4js'
 log = log4js.getLogger 'shackspace-api-space'
 
