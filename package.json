@@ -24,6 +24,7 @@
   "dependencies": {
     "co-request": "^1.0.0",
     "coffee-script": "^1.12.4",
+    "influx": "^5.0.7",
     "koa": "^1.2.5",
     "koa-body": "^1.6.0",
     "koa-cors": "0.0.16",
