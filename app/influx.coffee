@@ -17,21 +17,20 @@ influx = new Influx.InfluxDB
 			currentL2: Influx.FieldType.FLOAT
 			currentL3: Influx.FieldType.FLOAT
 		tags: []
-	]
-	# ,
-	# 	measurement: 'minutely'
-	# 	fields:
-	# 		total: Influx.FieldType.FLOAT
-	# 		powerL1: Influx.FieldType.FLOAT
-	# 		powerL2: Influx.FieldType.FLOAT
-	# 		powerL3: Influx.FieldType.FLOAT
-	# 		voltageL1: Influx.FieldType.FLOAT
-	# 		voltageL2: Influx.FieldType.FLOAT
-	# 		voltageL3: Influx.FieldType.FLOAT
-	# 		currentL1: Influx.FieldType.FLOAT
-	# 		currentL2: Influx.FieldType.FLOAT
-	# 		currentL3: Influx.FieldType.FLOAT
-	# 	tags: []
+	,
+		measurement: 'minutely'
+		fields:
+			total: Influx.FieldType.FLOAT
+			powerL1: Influx.FieldType.FLOAT
+			powerL2: Influx.FieldType.FLOAT
+			powerL3: Influx.FieldType.FLOAT
+			voltageL1: Influx.FieldType.FLOAT
+			voltageL2: Influx.FieldType.FLOAT
+			voltageL3: Influx.FieldType.FLOAT
+			currentL1: Influx.FieldType.FLOAT
+			currentL2: Influx.FieldType.FLOAT
+			currentL3: Influx.FieldType.FLOAT
+		tags: []
 	# ,
 	# 	measurement: 'hourly'
 	# 	fields:
@@ -46,7 +45,7 @@ influx = new Influx.InfluxDB
 	# 		currentL2: Influx.FieldType.FLOAT
 	# 		currentL3: Influx.FieldType.FLOAT
 	# 	tags: []
-	# ,
+	]
 	# 	measurement: 'monthly'
 	# 	fields:
 	# 		total: Influx.FieldType.FLOAT
