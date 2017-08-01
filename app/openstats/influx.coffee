@@ -39,11 +39,14 @@ writeLiveData = (isOpen) ->
 			open: +isOpen
 	],
 		retentionPolicy: '1d'
-		
-		
+
+getStats = ->
+	influx.query 'SELECT * FROM hourly'		
+
 module.exports =
 	init: init
 	writeLiveData: writeLiveData
+	getStats: getStats
 	
 # CREATE CONTINUOUS QUERY hourly ON open
 # BEGIN

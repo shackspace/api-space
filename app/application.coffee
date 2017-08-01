@@ -3,7 +3,7 @@ send = require 'koa-send'
 request = require 'co-request'
 log4js = require 'log4js'
 log = log4js.getLogger 'shackspace-api-space'
-
+portalInflux = require './openstats/influx'
 
 module.exports = ->
 	koa = require 'koa'
@@ -35,6 +35,10 @@ module.exports = ->
 		catch error
 			log.error error
 			@status = 503
+			
+	router.get '/v1/stats/portal', ->
+		stats = yield portalInflux.getStats()
+		@body = stats
 
 	app.use(router.routes()).use(router.allowedMethods())
 
