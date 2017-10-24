@@ -31,7 +31,9 @@ class Powerraw extends EventEmitter
 			@currentDataset = dataset
 			@emit 'data', dataset
 			# log.trace 'read live data'
-			
+
+		client.on 'error', =>
+			setTimeout @fetch, FETCH_INTERVAL
 		client.on 'close', =>
 			setTimeout @fetch, FETCH_INTERVAL
 
