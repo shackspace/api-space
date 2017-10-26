@@ -33,7 +33,7 @@ class Powerraw extends EventEmitter
 			# log.trace 'read live data'
 
 		client.on 'error', (err) =>
-			log.error 'could not connect to powerraw', err.msg
+			log.error 'could not connect to powerraw', err.message
 		client.on 'close', =>
 			setTimeout @fetch, FETCH_INTERVAL
 
